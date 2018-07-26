@@ -39,20 +39,22 @@ export class ListOfStashPoints extends React.Component<IProps, {}> {
 									<Button
 										href={`https://www.google.co.uk/maps/place/${
 											point.address
-										}`}
+											}`}
 										color="primary"
 									>
 										View on google maps!
 									</Button>
 								</CardBody>
 							</Card>
-							<p>
-								Try another
-								<a href="/"> location. </a>
-							</p>
 						</div>
 					);
 				})}
+				{this.props.data.length === 0 ? null : (
+				<p>
+					Try another
+					<a href="/"> location. </a>
+				</p> )
+				}
 			</div>
 		);
 	}
